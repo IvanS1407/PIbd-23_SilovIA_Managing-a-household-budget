@@ -1,6 +1,6 @@
 ﻿namespace HouseholdBudgetManager.Entities;
 
-internal class Operation
+public class Operation
 {
     public int Id { get; private set; }
     public int FamilyMemberId { get; private set; }

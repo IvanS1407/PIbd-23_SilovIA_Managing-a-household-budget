@@ -2,7 +2,7 @@
 
 namespace HouseholdBudgetManager.Entities;
 
-internal class FamilyMember
+public class FamilyMember
 {
     public int Id { get; private set; }
     public string Surname { get; private set; } = string.Empty;

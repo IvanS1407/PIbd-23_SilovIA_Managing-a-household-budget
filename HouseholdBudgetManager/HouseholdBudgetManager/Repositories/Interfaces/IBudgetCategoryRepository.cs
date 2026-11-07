@@ -2,7 +2,7 @@
 
 namespace HouseholdBudgetManager.Repositories.Interfaces;
 
-internal interface IBudgetCategoryRepository
+public interface IBudgetCategoryRepository
 {
     IEnumerable<BudgetCategory> ReadBudgetCategories();
     BudgetCategory ReadBudgetCategoryById(int id);

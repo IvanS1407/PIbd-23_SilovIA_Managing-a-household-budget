@@ -1,6 +1,6 @@
 ﻿namespace HouseholdBudgetManager.Entities;
 
-internal class BudgetPlanCategory
+public class BudgetPlanCategory
 {
     public int Id { get; private set; }
     public int CategoryId { get; private set; }

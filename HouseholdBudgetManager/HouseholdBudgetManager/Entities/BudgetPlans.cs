@@ -1,6 +1,6 @@
 ﻿namespace HouseholdBudgetManager.Entities;
 
-internal class BudgetPlans
+public class BudgetPlans
 {
     public int Id { get; private set; }
     public string Name { get; private set; } = string.Empty;

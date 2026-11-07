@@ -2,7 +2,7 @@
 
 namespace HouseholdBudgetManager.Repositories.Interfaces;
 
-internal interface IOperationRepository
+public interface IOperationRepository
 {
     IEnumerable<Operation> ReadOperations(
                                         DateTime? dateFrom = null,

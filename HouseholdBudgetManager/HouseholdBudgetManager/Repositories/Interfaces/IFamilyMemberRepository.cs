@@ -2,7 +2,7 @@
 
 namespace HouseholdBudgetManager.Repositories.Interfaces;
 
-internal interface IFamilyMemberRepository
+public interface IFamilyMemberRepository
 {
     IEnumerable<FamilyMember> ReadFamilyMembers();
     FamilyMember ReadFamilyMemberById(int id);

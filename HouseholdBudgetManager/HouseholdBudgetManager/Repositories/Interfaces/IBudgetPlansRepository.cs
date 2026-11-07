@@ -2,7 +2,7 @@
 
 namespace HouseholdBudgetManager.Repositories.Interfaces;
 
-internal interface IBudgetPlansRepository
+public interface IBudgetPlansRepository
 {
     IEnumerable<BudgetPlans> ReadBudgetPlans(DateTime? dateFrom = null);
     BudgetPlans ReadBudgetPlanById(int id);
