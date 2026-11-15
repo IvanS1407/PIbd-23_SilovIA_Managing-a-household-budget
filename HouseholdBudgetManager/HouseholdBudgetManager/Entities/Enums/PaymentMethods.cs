@@ -1,7 +1,7 @@
 ﻿namespace HouseholdBudgetManager.Entities.Enums;
 
 [Flags]
-internal enum PaymentMethods
+public enum PaymentMethods
 {
     None = 0,
     Cash = 1,

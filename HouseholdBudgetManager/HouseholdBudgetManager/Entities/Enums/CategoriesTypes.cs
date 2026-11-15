@@ -1,6 +1,6 @@
 ﻿namespace HouseholdBudgetManager.Entities.Enums;
 
-internal enum CategoriesTypes
+public enum CategoriesTypes
 {
     None = 0,
     Income = 1,

@@ -1,6 +1,6 @@
 ﻿namespace HouseholdBudgetManager.Entities.Enums;
 
-internal enum FamilyRole
+public enum FamilyRole
 {
     None = 0,
     Parent = 1,
