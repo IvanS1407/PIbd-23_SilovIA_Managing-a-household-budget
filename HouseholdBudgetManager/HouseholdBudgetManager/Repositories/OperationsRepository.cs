@@ -3,7 +3,7 @@ using HouseholdBudgetManager.Repositories.Interfaces;
 
 namespace HouseholdBudgetManager.Repositories;
 
-internal class OperationsRepository : IOperationRepository
+public class OperationsRepository : IOperationRepository
 {
     public void CreateOperation(Operation operation)
     {

@@ -3,7 +3,7 @@ using HouseholdBudgetManager.Repositories.Interfaces;
 
 namespace HouseholdBudgetManager.Repositories;
 
-internal class BudgetCategoryRepository : IBudgetCategoryRepository
+public class BudgetCategoryRepository : IBudgetCategoryRepository
 {
     public void CreateBudgetCategory(BudgetCategory category)
     {
