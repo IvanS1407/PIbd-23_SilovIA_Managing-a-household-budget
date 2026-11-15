@@ -10,6 +10,13 @@ public class BudgetPlans
 
     public static BudgetPlans CreateBudgetPlan(int id, string name, DateTime startMonth, int monthsCount)
     {
-        return new BudgetPlans { Id = id, Name = name, StartMonth = startMonth, MonthsCount = monthsCount, CreatedDate = DateTime.Now };
+        return new BudgetPlans
+        {
+            Id = id,
+            Name = name,
+            StartMonth = startMonth,
+            MonthsCount = monthsCount,
+            CreatedDate = DateTime.Now
+        };
     }
 }

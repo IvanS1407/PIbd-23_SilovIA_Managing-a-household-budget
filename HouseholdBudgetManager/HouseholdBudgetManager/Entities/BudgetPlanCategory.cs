@@ -9,6 +9,12 @@ public class BudgetPlanCategory
 
     public static BudgetPlanCategory CreateBudgetPlanCategory(int id, int categoryId, int budgetPlanId, decimal plannedAmount)
     {
-        return new BudgetPlanCategory { Id = id, CategoryId = categoryId, BudgetPlanId = budgetPlanId, PlannedAmount = plannedAmount };
+        return new BudgetPlanCategory
+        {
+            Id = id,
+            CategoryId = categoryId,
+            BudgetPlanId = budgetPlanId,
+            PlannedAmount = plannedAmount
+        };
     }
 }
