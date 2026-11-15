@@ -1,11 +1,4 @@
 ﻿using HouseholdBudgetManager.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using Unity;
 
 namespace HouseholdBudgetManager.Forms;
@@ -17,17 +10,30 @@ public partial class FormFamilyMembers : Form
     public FormFamilyMembers(IUnityContainer container, IFamilyMemberRepository memberRepository)
     {
         InitializeComponent();
-        _container = container ?? throw ArgumentNullException(nameof(memberRepository));
-        _memberRepository = memberRepository ?? throw ArgumentNullException(nameof(memberRepository));
+        _container = container ?? throw new ArgumentNullException(nameof(container));
+        _memberRepository = memberRepository ?? throw new ArgumentNullException(nameof(memberRepository));
     }
 
     private void LoadList() => dataGridViewFamilyMembers.DataSource = _memberRepository.ReadFamilyMembers();
+
+    private void FormFamilyMembers_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            LoadList();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Ошибка при загрузке", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
     private bool TryGetIdentifierFromSelectedRow(out int id)
     {
         id = 0;
         if (dataGridViewFamilyMembers.SelectedRows.Count < 1)
         {
-            MessageBox.Show("Нет записи", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Нет выбранной записи", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
 
@@ -50,11 +56,44 @@ public partial class FormFamilyMembers : Form
 
     private void buttonUpdate_Click(object sender, EventArgs e)
     {
+        if (!TryGetIdentifierFromSelectedRow(out var findInd))
+        {
+            return;
+        }
 
+        try
+        {
+            var form = _container.Resolve<FormFamilyMember>();
+            form.Id = findInd;
+            form.ShowDialog();
+            LoadList();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Ошибка при изменении", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     private void buttonDelete_Click(object sender, EventArgs e)
     {
+        if (!TryGetIdentifierFromSelectedRow(out var findInd))
+        {
+            return;
+        }
 
+        if (MessageBox.Show("Удалить запись?", "Удаление", MessageBoxButtons.YesNo) != DialogResult.Yes)
+        {
+            return;
+        }
+
+        try
+        {
+            _memberRepository.DeleteFamilyMember(findInd);
+            LoadList();
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Ошибка при удалении.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

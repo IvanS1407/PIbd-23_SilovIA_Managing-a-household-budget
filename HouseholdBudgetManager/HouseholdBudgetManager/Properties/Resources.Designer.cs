@@ -59,5 +59,35 @@ namespace HouseholdBudgetManager.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_add_button_5974633 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-add-button-5974633", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_delete_button_5974771 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-delete-button-5974771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_edit_button_6325975 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-edit-button-6325975", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

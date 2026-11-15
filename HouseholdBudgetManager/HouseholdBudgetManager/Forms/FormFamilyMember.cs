@@ -1,13 +1,7 @@
 ﻿using HouseholdBudgetManager.Entities;
 using HouseholdBudgetManager.Entities.Enums;
 using HouseholdBudgetManager.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace HouseholdBudgetManager.Forms;
 
