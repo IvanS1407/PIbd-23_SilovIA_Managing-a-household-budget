@@ -68,6 +68,7 @@
             budgetCategoriesToolStripMenuItem.Name = "budgetCategoriesToolStripMenuItem";
             budgetCategoriesToolStripMenuItem.Size = new Size(206, 24);
             budgetCategoriesToolStripMenuItem.Text = "Статьи бюджета";
+            budgetCategoriesToolStripMenuItem.Click += budgetCategoriesToolStripMenuItem_Click;
             // 
             // operationToolStripMenuItem
             // 

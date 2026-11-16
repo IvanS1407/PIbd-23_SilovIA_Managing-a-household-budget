@@ -24,4 +24,16 @@ public partial class FormBudgetManager : Form
             MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
+
+    private void budgetCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            _container.Resolve<FormBudgetCategories>().ShowDialog();
+        }
+        catch(Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
 }
