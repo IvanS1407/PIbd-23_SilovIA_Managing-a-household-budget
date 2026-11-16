@@ -140,12 +140,11 @@
             // dateTimePickerBirthDate
             // 
             dateTimePickerBirthDate.Location = new Point(380, 37);
-            dateTimePickerBirthDate.MaxDate = new DateTime(2026, 11, 7, 0, 0, 0, 0);
+            dateTimePickerBirthDate.Format = DateTimePickerFormat.Short;
             dateTimePickerBirthDate.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             dateTimePickerBirthDate.Size = new Size(229, 26);
             dateTimePickerBirthDate.TabIndex = 11;
-            dateTimePickerBirthDate.Value = new DateTime(2026, 11, 7, 0, 0, 0, 0);
             // 
             // FormFamilyMember
             // 

@@ -16,7 +16,7 @@ namespace HouseholdBudgetManager
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormBudgetManager());
+            Application.Run(CreateContainer().Resolve<FormBudgetManager>());
         }
 
         private static IUnityContainer CreateContainer()
@@ -24,8 +24,8 @@ namespace HouseholdBudgetManager
             var container = new UnityContainer();
             container.RegisterType<IFamilyMemberRepository, FamilyMemberRepository>(new TransientLifetimeManager());
             container.RegisterType<IBudgetCategoryRepository, BudgetCategoryRepository>(new TransientLifetimeManager());
-            container.RegisterType<IBudgetPlansRepository, BudgetPlansRepository>(new TransientLifetimeManager());
-            container.RegisterType<IOperationRepository, OperationsRepository>(new TransientLifetimeManager());
+            container.RegisterType<IBudgetPlanRepository, BudgetPlanRepository>(new TransientLifetimeManager());
+            container.RegisterType<IOperationRepository, OperationRepository>(new TransientLifetimeManager());
 
             return container;
         }

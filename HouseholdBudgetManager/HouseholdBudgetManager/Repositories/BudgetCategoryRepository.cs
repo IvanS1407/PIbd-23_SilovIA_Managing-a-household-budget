@@ -1,4 +1,5 @@
 ﻿using HouseholdBudgetManager.Entities;
+using HouseholdBudgetManager.Entities.Enums;
 using HouseholdBudgetManager.Repositories.Interfaces;
 
 namespace HouseholdBudgetManager.Repositories;
@@ -7,22 +8,25 @@ public class BudgetCategoryRepository : IBudgetCategoryRepository
 {
     public void CreateBudgetCategory(BudgetCategory category)
     {
-        throw new NotImplementedException();
     }
 
     public void DeleteBudgetCategory(int id)
     {
-        throw new NotImplementedException();
     }
 
     public IEnumerable<BudgetCategory> ReadBudgetCategories()
     {
-        throw new NotImplementedException();
+        return [];
     }
 
     public BudgetCategory ReadBudgetCategoryById(int id)
     {
-        throw new NotImplementedException();
+        return BudgetCategory.CreateCategory(
+                0,
+                string.Empty,
+                CategoryType.None,
+                PaymentMethods.None
+            );
     }
 
     public void UpdateBudgetCategory(BudgetCategory category)

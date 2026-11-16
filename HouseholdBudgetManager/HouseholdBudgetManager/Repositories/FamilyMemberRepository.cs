@@ -1,4 +1,5 @@
 ﻿using HouseholdBudgetManager.Entities;
+using HouseholdBudgetManager.Entities.Enums;
 using HouseholdBudgetManager.Repositories.Interfaces;
 
 namespace HouseholdBudgetManager.Repositories;
@@ -7,26 +8,30 @@ public class FamilyMemberRepository : IFamilyMemberRepository
 {
     public void CreateFamilyMember(FamilyMember familyMember)
     {
-        throw new NotImplementedException();
     }
 
     public void DeleteFamilyMember(int id)
     {
-        throw new NotImplementedException();
     }
 
     public FamilyMember ReadFamilyMemberById(int id)
     {
-        throw new NotImplementedException();
+        return FamilyMember.CreateMember(
+            0,
+            string.Empty,
+            string.Empty,
+            string.Empty,
+            DateTime.Today,
+            FamilyRole.None
+        );
     }
 
     public IEnumerable<FamilyMember> ReadFamilyMembers()
     {
-        throw new NotImplementedException();
+        return [];
     }
 
     public void UpdateFamilyMember(FamilyMember familyMember)
     {
-        throw new NotImplementedException();
     }
 }

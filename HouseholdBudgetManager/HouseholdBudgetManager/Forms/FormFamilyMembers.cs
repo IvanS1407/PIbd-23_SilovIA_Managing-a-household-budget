@@ -37,7 +37,7 @@ public partial class FormFamilyMembers : Form
             return false;
         }
 
-        id = Convert.ToInt32(dataGridViewFamilyMembers.SelectedRows[0].Cells["id"].Value);
+        id = Convert.ToInt32(dataGridViewFamilyMembers.SelectedRows[0].Cells["Id"].Value);
         return true;
     }
 

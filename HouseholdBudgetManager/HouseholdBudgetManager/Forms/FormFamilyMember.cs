@@ -27,6 +27,7 @@ public partial class FormFamilyMember : Form
                 textBoxName.Text = member.Name;
                 textBoxLastname.Text = member.LastName;
                 comboBoxRoles.SelectedItem = member.Role;
+                dateTimePickerBirthDate.Value = member.BirthDate;
                 _memberId = value;
             }
             catch (Exception ex)
@@ -41,6 +42,7 @@ public partial class FormFamilyMember : Form
     {
         InitializeComponent();
         comboBoxRoles.DataSource = Enum.GetValues(typeof(FamilyRole));
+        dateTimePickerBirthDate.MaxDate = DateTime.Today;
         _repository = memberRepository ?? throw new ArgumentNullException(nameof(memberRepository));
     }
 

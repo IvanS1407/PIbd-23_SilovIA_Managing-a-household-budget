@@ -16,8 +16,8 @@ public class FamilyMember
         return new FamilyMember
         {
             Id = id,
-            Surname = surname,
-            Name = name,
+            Surname = surname ?? string.Empty,
+            Name = name ?? string.Empty,
             LastName = lastname ?? string.Empty,
             BirthDate = birthdate,
             Role = role

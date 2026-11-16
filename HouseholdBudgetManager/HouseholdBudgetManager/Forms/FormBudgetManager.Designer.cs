@@ -31,11 +31,11 @@
             menuStripHeader = new MenuStrip();
             catalogToolStripMenuItemEntities = new ToolStripMenuItem();
             familyMembersToolStripMenuItem = new ToolStripMenuItem();
-            operationToolStripMenuItem = new ToolStripMenuItem();
-            reportsToolStripMenuItem = new ToolStripMenuItem();
             budgetCategoriesToolStripMenuItem = new ToolStripMenuItem();
+            operationToolStripMenuItem = new ToolStripMenuItem();
             operationsBudgetToolStripMenuItem = new ToolStripMenuItem();
             budgetPlansToolStripMenuItem = new ToolStripMenuItem();
+            reportsToolStripMenuItem = new ToolStripMenuItem();
             menuStripHeader.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +61,13 @@
             familyMembersToolStripMenuItem.Name = "familyMembersToolStripMenuItem";
             familyMembersToolStripMenuItem.Size = new Size(206, 24);
             familyMembersToolStripMenuItem.Text = "Члены семьи";
+            familyMembersToolStripMenuItem.Click += familyMembersToolStripMenuItem_Click;
+            // 
+            // budgetCategoriesToolStripMenuItem
+            // 
+            budgetCategoriesToolStripMenuItem.Name = "budgetCategoriesToolStripMenuItem";
+            budgetCategoriesToolStripMenuItem.Size = new Size(206, 24);
+            budgetCategoriesToolStripMenuItem.Text = "Статьи бюджета";
             // 
             // operationToolStripMenuItem
             // 
@@ -69,39 +76,34 @@
             operationToolStripMenuItem.Size = new Size(88, 23);
             operationToolStripMenuItem.Text = "Операции";
             // 
+            // operationsBudgetToolStripMenuItem
+            // 
+            operationsBudgetToolStripMenuItem.Name = "operationsBudgetToolStripMenuItem";
+            operationsBudgetToolStripMenuItem.Size = new Size(189, 24);
+            operationsBudgetToolStripMenuItem.Text = "Операции";
+            // 
+            // budgetPlansToolStripMenuItem
+            // 
+            budgetPlansToolStripMenuItem.Name = "budgetPlansToolStripMenuItem";
+            budgetPlansToolStripMenuItem.Size = new Size(189, 24);
+            budgetPlansToolStripMenuItem.Text = "Планы бюджета";
+            // 
             // reportsToolStripMenuItem
             // 
             reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             reportsToolStripMenuItem.Size = new Size(71, 23);
             reportsToolStripMenuItem.Text = "Отчеты";
             // 
-            // budgetCategoriesToolStripMenuItem
-            // 
-            budgetCategoriesToolStripMenuItem.Name = "budgetCategoriesToolStripMenuItem";
-            budgetCategoriesToolStripMenuItem.Size = new Size(206, 24);
-            budgetCategoriesToolStripMenuItem.Text = "Статьи бюджета";
-            // 
-            // operationsBudgetToolStripMenuItem
-            // 
-            operationsBudgetToolStripMenuItem.Name = "operationsBudgetToolStripMenuItem";
-            operationsBudgetToolStripMenuItem.Size = new Size(206, 24);
-            operationsBudgetToolStripMenuItem.Text = "Операции";
-            // 
-            // budgetPlansToolStripMenuItem
-            // 
-            budgetPlansToolStripMenuItem.Name = "budgetPlansToolStripMenuItem";
-            budgetPlansToolStripMenuItem.Size = new Size(206, 24);
-            budgetPlansToolStripMenuItem.Text = "Планы бюджета";
-            // 
-            // FromBudgetManager
+            // FormBudgetManager
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(908, 486);
             Controls.Add(menuStripHeader);
             MainMenuStrip = menuStripHeader;
-            Name = "FromBudgetManager";
-            Text = "Form1";
+            Name = "FormBudgetManager";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Управление семейным бюджетом";
             menuStripHeader.ResumeLayout(false);
             menuStripHeader.PerformLayout();
             ResumeLayout(false);

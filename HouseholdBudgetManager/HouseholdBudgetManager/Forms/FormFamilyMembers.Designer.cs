@@ -51,7 +51,7 @@
             dataGridViewFamilyMembers.RowHeadersVisible = false;
             dataGridViewFamilyMembers.RowHeadersWidth = 47;
             dataGridViewFamilyMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewFamilyMembers.Size = new Size(673, 369);
+            dataGridViewFamilyMembers.Size = new Size(673, 446);
             dataGridViewFamilyMembers.TabIndex = 0;
             // 
             // panelFamilyMembersButtons
@@ -62,7 +62,7 @@
             panelFamilyMembersButtons.Dock = DockStyle.Right;
             panelFamilyMembersButtons.Location = new Point(673, 0);
             panelFamilyMembersButtons.Name = "panelFamilyMembersButtons";
-            panelFamilyMembersButtons.Size = new Size(127, 369);
+            panelFamilyMembersButtons.Size = new Size(127, 446);
             panelFamilyMembersButtons.TabIndex = 1;
             // 
             // buttonDelete
@@ -108,11 +108,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 369);
+            ClientSize = new Size(800, 446);
             Controls.Add(dataGridViewFamilyMembers);
             Controls.Add(panelFamilyMembersButtons);
             Name = "FormFamilyMembers";
-            Text = "FormFamilyMembers";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Члены семьи";
+            Load += FormFamilyMembers_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewFamilyMembers).EndInit();
             panelFamilyMembersButtons.ResumeLayout(false);
             ResumeLayout(false);

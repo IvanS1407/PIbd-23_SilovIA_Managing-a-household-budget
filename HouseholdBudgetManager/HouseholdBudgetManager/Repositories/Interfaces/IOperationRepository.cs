@@ -9,6 +9,5 @@ public interface IOperationRepository
                                         DateTime? dateTo = null,
                                         int? familyMemberId = null,
                                         int? categoryId = null);
-    Operation ReadOperationById(int id);
     void CreateOperation(Operation operation);
 }
