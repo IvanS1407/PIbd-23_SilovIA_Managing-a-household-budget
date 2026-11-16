@@ -31,7 +31,19 @@ public partial class FormBudgetManager : Form
         {
             _container.Resolve<FormBudgetCategories>().ShowDialog();
         }
-        catch(Exception ex)
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    private void operationsBudgetToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            _container.Resolve<FormOperations>().ShowDialog();
+        }
+        catch (Exception ex)
         {
             MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

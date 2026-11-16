@@ -80,13 +80,14 @@
             // operationsBudgetToolStripMenuItem
             // 
             operationsBudgetToolStripMenuItem.Name = "operationsBudgetToolStripMenuItem";
-            operationsBudgetToolStripMenuItem.Size = new Size(189, 24);
+            operationsBudgetToolStripMenuItem.Size = new Size(206, 24);
             operationsBudgetToolStripMenuItem.Text = "Операции";
+            operationsBudgetToolStripMenuItem.Click += operationsBudgetToolStripMenuItem_Click;
             // 
             // budgetPlansToolStripMenuItem
             // 
             budgetPlansToolStripMenuItem.Name = "budgetPlansToolStripMenuItem";
-            budgetPlansToolStripMenuItem.Size = new Size(189, 24);
+            budgetPlansToolStripMenuItem.Size = new Size(206, 24);
             budgetPlansToolStripMenuItem.Text = "Планы бюджета";
             // 
             // reportsToolStripMenuItem
