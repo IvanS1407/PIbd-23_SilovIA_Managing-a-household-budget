@@ -59,14 +59,14 @@
             // familyMembersToolStripMenuItem
             // 
             familyMembersToolStripMenuItem.Name = "familyMembersToolStripMenuItem";
-            familyMembersToolStripMenuItem.Size = new Size(206, 24);
+            familyMembersToolStripMenuItem.Size = new Size(190, 24);
             familyMembersToolStripMenuItem.Text = "Члены семьи";
             familyMembersToolStripMenuItem.Click += familyMembersToolStripMenuItem_Click;
             // 
             // budgetCategoriesToolStripMenuItem
             // 
             budgetCategoriesToolStripMenuItem.Name = "budgetCategoriesToolStripMenuItem";
-            budgetCategoriesToolStripMenuItem.Size = new Size(206, 24);
+            budgetCategoriesToolStripMenuItem.Size = new Size(190, 24);
             budgetCategoriesToolStripMenuItem.Text = "Статьи бюджета";
             budgetCategoriesToolStripMenuItem.Click += budgetCategoriesToolStripMenuItem_Click;
             // 
@@ -89,6 +89,7 @@
             budgetPlansToolStripMenuItem.Name = "budgetPlansToolStripMenuItem";
             budgetPlansToolStripMenuItem.Size = new Size(206, 24);
             budgetPlansToolStripMenuItem.Text = "Планы бюджета";
+            budgetPlansToolStripMenuItem.Click += budgetPlansToolStripMenuItem_Click;
             // 
             // reportsToolStripMenuItem
             // 
