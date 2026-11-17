@@ -81,10 +81,15 @@
             // 
             // numericUpDownAmount
             // 
+            numericUpDownAmount.DecimalPlaces = 2;
             numericUpDownAmount.Location = new Point(12, 32);
+            numericUpDownAmount.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            numericUpDownAmount.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
             numericUpDownAmount.Name = "numericUpDownAmount";
             numericUpDownAmount.Size = new Size(138, 26);
             numericUpDownAmount.TabIndex = 4;
+            numericUpDownAmount.ThousandsSeparator = true;
+            numericUpDownAmount.Value = new decimal(new int[] { 1, 0, 0, 131072 });
             // 
             // labelAmount
             // 
@@ -97,6 +102,7 @@
             // 
             // dateTimePickerOperation
             // 
+            dateTimePickerOperation.Format = DateTimePickerFormat.Short;
             dateTimePickerOperation.Location = new Point(470, 84);
             dateTimePickerOperation.Name = "dateTimePickerOperation";
             dateTimePickerOperation.Size = new Size(229, 26);
@@ -165,7 +171,7 @@
             Controls.Add(comboBoxCategory);
             Controls.Add(comboBoxFamilyMember);
             Name = "FormOperation";
-            Text = "FormOperation";
+            Text = "Операция";
             ((System.ComponentModel.ISupportInitialize)numericUpDownAmount).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -73,11 +73,11 @@ public partial class FormBudgetCategory : Form
             }
             if (_budgetCategoryId.HasValue)
             {
-                _repository.UpdateBudgetCategory(CreateBudgetCategoty(_budgetCategoryId.Value));
+                _repository.UpdateBudgetCategory(CreateBudgetCategory(_budgetCategoryId.Value));
             }
             else
             {
-                _repository.CreateBudgetCategory(CreateBudgetCategoty(0));
+                _repository.CreateBudgetCategory(CreateBudgetCategory(0));
             }
             Close();
         }
@@ -89,7 +89,7 @@ public partial class FormBudgetCategory : Form
 
     private void buttonCancel_Click(object sender, EventArgs e) => Close();
 
-    private BudgetCategory CreateBudgetCategoty(int id)
+    private BudgetCategory CreateBudgetCategory(int id)
     {
         PaymentMethods paymentMethods = PaymentMethods.None;
         foreach(var item in checkedListBoxBudgetCategoryPaymentMethods.CheckedItems)

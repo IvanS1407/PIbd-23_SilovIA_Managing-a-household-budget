@@ -30,8 +30,8 @@
         {
             dataGridViewBudgetPlans = new DataGridView();
             panelBudgetPlans = new Panel();
-            buttonAdd = new Button();
             buttonDelete = new Button();
+            buttonAdd = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBudgetPlans).BeginInit();
             panelBudgetPlans.SuspendLayout();
             SuspendLayout();
@@ -62,19 +62,6 @@
             panelBudgetPlans.Size = new Size(162, 450);
             panelBudgetPlans.TabIndex = 3;
             // 
-            // buttonAdd
-            // 
-            buttonAdd.BackgroundImage = Properties.Resources.free_icon_add_button_5974633;
-            buttonAdd.BackgroundImageLayout = ImageLayout.Stretch;
-            buttonAdd.Location = new Point(6, 3);
-            buttonAdd.MaximumSize = new Size(150, 150);
-            buttonAdd.MinimumSize = new Size(150, 150);
-            buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(150, 150);
-            buttonAdd.TabIndex = 0;
-            buttonAdd.UseVisualStyleBackColor = true;
-            buttonAdd.Click += buttonAdd_Click;
-            // 
             // buttonDelete
             // 
             buttonDelete.BackgroundImage = Properties.Resources.free_icon_delete_button_5974771;
@@ -88,6 +75,19 @@
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
+            // buttonAdd
+            // 
+            buttonAdd.BackgroundImage = Properties.Resources.free_icon_add_button_5974633;
+            buttonAdd.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonAdd.Location = new Point(6, 3);
+            buttonAdd.MaximumSize = new Size(150, 150);
+            buttonAdd.MinimumSize = new Size(150, 150);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(150, 150);
+            buttonAdd.TabIndex = 0;
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
+            // 
             // FormBudgetPlans
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
@@ -96,7 +96,7 @@
             Controls.Add(dataGridViewBudgetPlans);
             Controls.Add(panelBudgetPlans);
             Name = "FormBudgetPlans";
-            Text = "FormBudgetPlans";
+            Text = "Планировка бюджета";
             Load += FormBudgetPlans_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBudgetPlans).EndInit();
             panelBudgetPlans.ResumeLayout(false);

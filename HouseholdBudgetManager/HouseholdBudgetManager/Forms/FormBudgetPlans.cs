@@ -10,8 +10,8 @@ public partial class FormBudgetPlans : Form
     public FormBudgetPlans(IUnityContainer container, IBudgetPlanRepository repository)
     {
         InitializeComponent();
-        _container = container ?? throw new ArgumentException(nameof(container));
-        _budgetPlanRepository = repository ?? throw new ArgumentException(nameof(repository));
+        _container = container ?? throw new ArgumentNullException(nameof(container));
+        _budgetPlanRepository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
 
     private void FormBudgetPlans_Load(object sender, EventArgs e)
@@ -73,6 +73,4 @@ public partial class FormBudgetPlans : Form
         id = Convert.ToInt32(dataGridViewBudgetPlans.SelectedRows[0].Cells["Id"].Value);
         return true;
     }
-
-    
 }

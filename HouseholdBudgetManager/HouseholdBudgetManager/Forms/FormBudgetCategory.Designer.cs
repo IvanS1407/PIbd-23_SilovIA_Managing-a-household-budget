@@ -56,6 +56,7 @@
             // 
             // comboBoxBudgetCategory
             // 
+            comboBoxBudgetCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxBudgetCategory.FormattingEnabled = true;
             comboBoxBudgetCategory.Location = new Point(12, 118);
             comboBoxBudgetCategory.Name = "comboBoxBudgetCategory";
@@ -64,6 +65,7 @@
             // 
             // checkedListBoxBudgetCategoryPaymentMethods
             // 
+            checkedListBoxBudgetCategoryPaymentMethods.CheckOnClick = true;
             checkedListBoxBudgetCategoryPaymentMethods.FormattingEnabled = true;
             checkedListBoxBudgetCategoryPaymentMethods.Location = new Point(267, 36);
             checkedListBoxBudgetCategoryPaymentMethods.Name = "checkedListBoxBudgetCategoryPaymentMethods";

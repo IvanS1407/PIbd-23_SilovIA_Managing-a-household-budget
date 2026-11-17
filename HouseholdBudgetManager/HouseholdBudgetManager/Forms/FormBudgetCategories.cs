@@ -27,7 +27,7 @@ public partial class FormBudgetCategories : Form
         }
     }
 
-    private void LoadList() => dataGridViewBudgetCategory.DataSource = _repository.ReadBudgetCategories;
+    private void LoadList() => dataGridViewBudgetCategory.DataSource = _repository.ReadBudgetCategories();
 
     private bool TryGetIdentifierFromSelectionRow(out int id)
     {

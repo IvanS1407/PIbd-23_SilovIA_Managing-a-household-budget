@@ -124,7 +124,7 @@
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(86, 26);
             buttonCancel.TabIndex = 9;
-            buttonCancel.Text = "Отмена";
+            buttonCancel.Text = "Отменить";
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += buttonCancel_Click;
             // 
@@ -139,8 +139,8 @@
             // 
             // dateTimePickerBirthDate
             // 
-            dateTimePickerBirthDate.Location = new Point(380, 37);
             dateTimePickerBirthDate.Format = DateTimePickerFormat.Short;
+            dateTimePickerBirthDate.Location = new Point(380, 37);
             dateTimePickerBirthDate.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             dateTimePickerBirthDate.Size = new Size(229, 26);

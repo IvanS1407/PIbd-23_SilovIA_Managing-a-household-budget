@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            panelOperaionsButtons = new Panel();
             buttonAdd = new Button();
             dataGridViewOperations = new DataGridView();
-            panel1.SuspendLayout();
+            panelOperaionsButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOperations).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelOperaionsButtons
             // 
-            panel1.Controls.Add(buttonAdd);
-            panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(643, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(157, 450);
-            panel1.TabIndex = 0;
+            panelOperaionsButtons.Controls.Add(buttonAdd);
+            panelOperaionsButtons.Dock = DockStyle.Right;
+            panelOperaionsButtons.Location = new Point(643, 0);
+            panelOperaionsButtons.Name = "panelOperaionsButtons";
+            panelOperaionsButtons.Size = new Size(157, 450);
+            panelOperaionsButtons.TabIndex = 0;
             // 
             // buttonAdd
             // 
@@ -78,18 +78,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridViewOperations);
-            Controls.Add(panel1);
+            Controls.Add(panelOperaionsButtons);
             Name = "FormOperations";
             Text = "Операции";
             Load += FormOperations_Load;
-            panel1.ResumeLayout(false);
+            panelOperaionsButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewOperations).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelOperaionsButtons;
         private Button buttonAdd;
         private DataGridView dataGridViewOperations;
     }

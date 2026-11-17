@@ -34,6 +34,7 @@ public partial class FormBudgetPlan : Form
                 Convert.ToInt32(numericUpDownMonth.Value),
                 categories
                 ));
+            Close();
         }
         catch (Exception ex)
         {

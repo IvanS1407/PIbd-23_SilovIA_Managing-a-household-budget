@@ -31,7 +31,7 @@ public partial class FormOperation : Form
         {
             if (comboBoxFamilyMember.SelectedIndex < 0 || comboBoxCategory.SelectedIndex < 0)
             {
-                throw new Exception("Есть не заполненные поля.");
+                throw new Exception("Есть незаполненные поля.");
             }
             _operationRepository.CreateOperation(Operation.CreateOperation(
                     0,

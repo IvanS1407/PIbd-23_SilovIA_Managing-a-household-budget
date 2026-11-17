@@ -37,13 +37,13 @@
             dateTimePickerCreated = new DateTimePicker();
             labelDateCreated = new Label();
             numericUpDownMonth = new NumericUpDown();
-            labelMonthsFurher = new Label();
-            groupBoxCategpries = new GroupBox();
+            labelMonthsCount = new Label();
+            groupBoxCategories = new GroupBox();
             dataGridViewCategories = new DataGridView();
             ColumnCategory = new DataGridViewComboBoxColumn();
-            ColumnPlannedAmount = new DataGridViewComboBoxColumn();
+            ColumnPlannedAmount = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)numericUpDownMonth).BeginInit();
-            groupBoxCategpries.SuspendLayout();
+            groupBoxCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategories).BeginInit();
             SuspendLayout();
             // 
@@ -85,10 +85,11 @@
             // 
             // dateTimePickerStart
             // 
+            dateTimePickerStart.CustomFormat = "MMMM yyyy";
             dateTimePickerStart.Format = DateTimePickerFormat.Custom;
             dateTimePickerStart.Location = new Point(163, 44);
             dateTimePickerStart.Name = "dateTimePickerStart";
-            dateTimePickerStart.Size = new Size(115, 26);
+            dateTimePickerStart.Size = new Size(145, 26);
             dateTimePickerStart.TabIndex = 4;
             // 
             // labelDate
@@ -127,24 +128,24 @@
             numericUpDownMonth.TabIndex = 8;
             numericUpDownMonth.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // labelMonthsFurher
+            // labelMonthsCount
             // 
-            labelMonthsFurher.AutoSize = true;
-            labelMonthsFurher.Location = new Point(12, 90);
-            labelMonthsFurher.Name = "labelMonthsFurher";
-            labelMonthsFurher.Size = new Size(136, 19);
-            labelMonthsFurher.TabIndex = 9;
-            labelMonthsFurher.Text = "На сколько месяцев";
+            labelMonthsCount.AutoSize = true;
+            labelMonthsCount.Location = new Point(12, 90);
+            labelMonthsCount.Name = "labelMonthsCount";
+            labelMonthsCount.Size = new Size(136, 19);
+            labelMonthsCount.TabIndex = 9;
+            labelMonthsCount.Text = "На сколько месяцев";
             // 
-            // groupBoxCategpries
+            // groupBoxCategories
             // 
-            groupBoxCategpries.Controls.Add(dataGridViewCategories);
-            groupBoxCategpries.Location = new Point(333, 5);
-            groupBoxCategpries.Name = "groupBoxCategpries";
-            groupBoxCategpries.Size = new Size(455, 322);
-            groupBoxCategpries.TabIndex = 10;
-            groupBoxCategpries.TabStop = false;
-            groupBoxCategpries.Text = "Статьи плана";
+            groupBoxCategories.Controls.Add(dataGridViewCategories);
+            groupBoxCategories.Location = new Point(333, 5);
+            groupBoxCategories.Name = "groupBoxCategories";
+            groupBoxCategories.Size = new Size(455, 322);
+            groupBoxCategories.TabIndex = 10;
+            groupBoxCategories.TabStop = false;
+            groupBoxCategories.Text = "Статьи плана";
             // 
             // dataGridViewCategories
             // 
@@ -171,14 +172,16 @@
             ColumnPlannedAmount.HeaderText = "Плановая сумма в месяц";
             ColumnPlannedAmount.MinimumWidth = 6;
             ColumnPlannedAmount.Name = "ColumnPlannedAmount";
+            ColumnPlannedAmount.Resizable = DataGridViewTriState.True;
+            ColumnPlannedAmount.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // FormBudgetPlan
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 335);
-            Controls.Add(groupBoxCategpries);
-            Controls.Add(labelMonthsFurher);
+            Controls.Add(groupBoxCategories);
+            Controls.Add(labelMonthsCount);
             Controls.Add(numericUpDownMonth);
             Controls.Add(labelDateCreated);
             Controls.Add(dateTimePickerCreated);
@@ -192,7 +195,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Бюджетный план";
             ((System.ComponentModel.ISupportInitialize)numericUpDownMonth).EndInit();
-            groupBoxCategpries.ResumeLayout(false);
+            groupBoxCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategories).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -209,10 +212,10 @@
         private DateTimePicker dateTimePickerCreated;
         private Label labelDateCreated;
         private NumericUpDown numericUpDownMonth;
-        private Label labelMonthsFurher;
-        private GroupBox groupBoxCategpries;
+        private Label labelMonthsCount;
+        private GroupBox groupBoxCategories;
         private DataGridView dataGridViewCategories;
         private DataGridViewComboBoxColumn ColumnCategory;
-        private DataGridViewComboBoxColumn ColumnPlannedAmount;
+        private DataGridViewTextBoxColumn ColumnPlannedAmount;
     }
 }
