@@ -1,14 +1,28 @@
 ﻿using HouseholdBudgetManager.Entities.Enums;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HouseholdBudgetManager.Entities;
 
 public class FamilyMember
 {
+    [Key]
     public int Id { get; private set; }
+
+    [Required]
+    [MaxLength(100)]
     public string Surname { get; private set; } = string.Empty;
+
+    [Required]
+    [MaxLength(100)]
     public string Name { get; private set; } = string.Empty;
+
+    [MaxLength(100)]
     public string LastName { get; private set;  } = string.Empty;
+
+    [Column(TypeName = "date")]
     public DateTime BirthDate { get; private set; }
+
     public FamilyRole Role { get; private set; }
 
     public static FamilyMember CreateMember(int id, string name, string surname, string lastname, DateTime birthdate, FamilyRole role)
