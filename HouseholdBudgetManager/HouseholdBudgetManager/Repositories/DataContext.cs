@@ -60,6 +60,10 @@ public class DataContext : DbContext
             entity.Property(x => x.Name).IsRequired().HasMaxLength(150);
             entity.Property(x => x.StartMonth).HasColumnType("date");
             entity.Property(x => x.CreatedDate).HasColumnType("timestamp");
+            entity.HasMany(x => x.BudgetPlanCategories)
+                                  .WithOne()
+                                  .HasForeignKey(x => x.BudgetPlanId)
+                                  .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<BudgetPlanCategory>(entity =>

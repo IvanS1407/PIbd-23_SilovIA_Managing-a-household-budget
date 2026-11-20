@@ -20,8 +20,7 @@ public class BudgetPlan
     [Column(TypeName = "timestamp")]
     public DateTime CreatedDate { get; private set; }
 
-    [ForeignKey(nameof(BudgetPlanCategory.BudgetPlanId))]
-    public IEnumerable<BudgetPlanCategory> BudgetPlanCategories { get; private set; }
+    public ICollection<BudgetPlanCategory> BudgetPlanCategories { get; private set; } = new List<BudgetPlanCategory>();
 
     public static BudgetPlan CreateBudgetPlan(int id, string name, DateTime startMonth, int monthsCount, IEnumerable<BudgetPlanCategory> budgetPlanCategories)
     {
@@ -32,7 +31,7 @@ public class BudgetPlan
             StartMonth = startMonth,
             MonthsCount = monthsCount,
             CreatedDate = DateTime.Now,
-            BudgetPlanCategories = budgetPlanCategories
+            BudgetPlanCategories = budgetPlanCategories?.ToList() ?? new List<BudgetPlanCategory>()
         };
     }
 }
