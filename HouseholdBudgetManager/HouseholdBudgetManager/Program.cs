@@ -43,7 +43,7 @@ namespace HouseholdBudgetManager
             var loggerFactory = new LoggerFactory();
             loggerFactory.AddSerilog(new LoggerConfiguration()
                          .ReadFrom.Configuration(new ConfigurationBuilder()
-                            .SetBasePath(Directory.GetCurrentDirectory())
+                            .SetBasePath(AppContext.BaseDirectory)
                             .AddJsonFile("appsettings.json")
                             .Build())
                          .CreateLogger());
