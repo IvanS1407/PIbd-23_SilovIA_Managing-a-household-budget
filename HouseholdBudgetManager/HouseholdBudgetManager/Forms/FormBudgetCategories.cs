@@ -37,7 +37,7 @@ public partial class FormBudgetCategories : Form
             MessageBox.Show("Нет выбранной записи.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
-        id = Convert.ToInt32(dataGridViewBudgetCategory.SelectedRows[0].Cells["id"].Value);
+        id = Convert.ToInt32(dataGridViewBudgetCategory.SelectedRows[0].Cells["Id"].Value);
         return true;
     }
 

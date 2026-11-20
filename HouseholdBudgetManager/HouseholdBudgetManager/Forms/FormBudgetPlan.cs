@@ -63,12 +63,12 @@ public partial class FormBudgetPlan : Form
             {
                 throw new Exception("Плановая сумма указана неверно.");
             }
-            list.Add(BudgetPlanCategory.CreateBudgetPlanCategory(0, 0, Convert.ToInt32(category), amount));
+            list.Add(BudgetPlanCategory.CreateBudgetPlanCategory(0, Convert.ToInt32(category), 0, amount));
         }
 
         return list
                .GroupBy(x => x.CategoryId, x => x.PlannedAmount,
-               (id, amounts) => BudgetPlanCategory.CreateBudgetPlanCategory(0, 0, id, amounts.Sum()))
+               (id, amounts) => BudgetPlanCategory.CreateBudgetPlanCategory(0, id, 0, amounts.Sum()))
                .ToList();
     }
 }
