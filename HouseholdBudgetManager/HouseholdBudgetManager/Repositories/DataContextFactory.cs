@@ -6,6 +6,6 @@ public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
 {
     public DataContext CreateDbContext(string[] args)
     {
-        return new DataContext(new NpqsqlConnectionString());
+        return new DataContext(new NpgsqlConnectionString());
     }
 }

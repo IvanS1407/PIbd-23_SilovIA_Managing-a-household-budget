@@ -32,7 +32,7 @@ public class DataContext : DbContext
             entity.Property(x => x.Surname).IsRequired().HasMaxLength(100);
             entity.Property(x => x.Name).IsRequired().HasMaxLength(100);
             entity.Property(x => x.LastName).IsRequired(false).HasMaxLength(100);
-            entity.Property(x => x.BirthDate).IsRequired(false).HasColumnType("date");
+            entity.Property(x => x.BirthDate).IsRequired().HasColumnType("date");
         });
 
         modelBuilder.Entity<BudgetCategory>(entity =>

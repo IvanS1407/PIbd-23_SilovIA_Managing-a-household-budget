@@ -29,7 +29,7 @@ namespace HouseholdBudgetManager
 
             container.AddExtension(new LoggingExtension(CreateLoggerFactory()));
 
-            container.RegisterType<IConnectionString, NpqsqlConnectionString>(new SingletonLifetimeManager());
+            container.RegisterType<IConnectionString, NpgsqlConnectionString>(new SingletonLifetimeManager());
             container.RegisterType<IFamilyMemberRepository, FamilyMemberRepository>(new TransientLifetimeManager());
             container.RegisterType<IBudgetCategoryRepository, BudgetCategoryRepository>(new TransientLifetimeManager());
             container.RegisterType<IBudgetPlanRepository, BudgetPlanRepository>(new TransientLifetimeManager());
