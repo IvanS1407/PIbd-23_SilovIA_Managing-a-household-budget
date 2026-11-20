@@ -69,7 +69,7 @@ public class DataContext : DbContext
         modelBuilder.Entity<BudgetPlanCategory>(entity =>
         {
             entity.HasOne<BudgetPlan>()
-                         .WithMany()
+                         .WithMany(x => x.BudgetPlanCategories)
                          .HasForeignKey(x => x.BudgetPlanId)
                          .OnDelete(DeleteBehavior.Cascade);
             entity.HasOne<BudgetCategory>()

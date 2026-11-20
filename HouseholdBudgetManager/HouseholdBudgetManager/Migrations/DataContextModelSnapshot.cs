@@ -87,9 +87,6 @@ namespace HouseholdBudgetManager.Migrations
                     b.Property<int>("BudgetPlanId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("BudgetPlanId1")
-                        .HasColumnType("integer");
-
                     b.Property<int>("CategoryId")
                         .HasColumnType("integer");
 
@@ -98,8 +95,6 @@ namespace HouseholdBudgetManager.Migrations
                         .HasColumnType("numeric(12,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BudgetPlanId1");
 
                     b.HasIndex("CategoryId");
 
@@ -179,14 +174,10 @@ namespace HouseholdBudgetManager.Migrations
             modelBuilder.Entity("HouseholdBudgetManager.Entities.BudgetPlanCategory", b =>
                 {
                     b.HasOne("HouseholdBudgetManager.Entities.BudgetPlan", null)
-                        .WithMany()
+                        .WithMany("BudgetPlanCategories")
                         .HasForeignKey("BudgetPlanId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("HouseholdBudgetManager.Entities.BudgetPlan", null)
-                        .WithMany("BudgetPlanCategories")
-                        .HasForeignKey("BudgetPlanId1");
 
                     b.HasOne("HouseholdBudgetManager.Entities.BudgetCategory", null)
                         .WithMany()
